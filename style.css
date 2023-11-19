@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root
+{
+    --text: 1.5rem;
+    --head: calc(1rem + 5vw);
+    --bg-color: rgb(241, 101, 101);
+}
+
+body
+{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.hero-section
+{
+    min-height: 100vh;
+    background: url(https://chicagopizza.in/wp-content/uploads/2022/02/Best-Pizza-franchise-in-India.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 2;
+    animation: slide 1s ease-in-out;
+}
+
+.navbar
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 0rem 1.5rem;
+    color: wheat;
+    transform: translateY(-100%);
+    animation: movedown 700ms ease-in 2s forwards;
+}
+
+@keyframes movedown{
+        form{
+        transform: translateY(-100%);
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
+
+.navbar ul
+{
+    list-style: none;
+    padding-left: 40%;
+}
+
+.navbar ul li
+{
+    display: inline-block;
+    margin: 3rem;
+    font-size: var(--text);
+}
+
+.navbar ul li a
+{
+    text-decoration: none;
+    color: rgb(185, 230, 62);
+    border-bottom: 1px solid transparent;
+}
+
+.navbar ul li a:hover
+{
+    border-bottom: 1px solid white;
+}
+
+.hero-text
+{
+    color: rgb(234, 249, 186);
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: slide 2s ease-in-out;
+}
+
+@keyframes slide
+{
+    from
+    {
+        transform: translateX(-100%);
+    }
+    to
+    {
+        transform: translatX(0%);
+    }
+}
+
+.hero-text::before
+{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(218, 21, 21);
+    z-index: 1;
+    top: 0;
+    opacity: 0.1;
+}
+
+.hero-text a
+{
+    color: rgb(245, 248, 245);
+    /* background: var(--bg-color); */
+    font-weight: 900;
+    /* font-size: var(--text); */
+    padding: 0.8rem 1rem;
+    margin: 1rem auto;
+    display: block;
+    transition: opacity 250ms linear;
+}
+
+/* .hero-text a:hover
+{
+    opacity: 0.2;
+} */
+
+.hero-text h2
+{
+    font-size: var(--head);
+}
+
+.hero-text p
+{
+    font-size: 2rem;
+}
+
